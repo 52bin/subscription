@@ -50,10 +50,13 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-    -[A, B]
+    - A
+    - B
     - DIRECT
-    use: [WARP, W, S] 
-
+    use: 
+    - WARP
+    - W
+    - S
 
 rule-providers:
     reject: { type: http, behavior: domain, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt', path: ./ruleset/reject.yaml, interval: 86400 }
