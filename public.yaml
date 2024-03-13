@@ -99,7 +99,6 @@ proxy-groups:
   - name: 🇨🇳 国内网站
     type: select
     proxies:
-    proxies:
     - DIRECT
     - 💡 自动选择
     - 🚀 节点选择
