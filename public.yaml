@@ -67,29 +67,24 @@ proxy-groups:
     - WARP
     - W
     - S
-  - name: 🍎 苹果服务
-    type: select
-    proxies:
-    - DIRECT
-    - REJECT
-    - 💡 自动选择
-    - A
-    - B
-    use: 
-    - WARP
-    - W
-    - S
-  - name: 🛑 广告拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
   - name: 📲 电报消息
     type: select
     proxies:
     - 💡 自动选择
     - 🚀 节点选择
     - DIRECT
+    - A
+    - B
+    use: 
+    - WARP
+    - W
+    - S
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+    - DIRECT
+    - REJECT
+    - 💡 自动选择
     - A
     - B
     use: 
@@ -108,6 +103,11 @@ proxy-groups:
     - WARP
     - W
     - S
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
   - name: 🎯 全球直连
     type: select
     proxies:
