@@ -126,7 +126,6 @@ rule-providers:
     lancidr: { type: http, behavior: ipcidr, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt', path: ./ruleset/lancidr.yaml, interval: 86400 }
     applications: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt', path: ./ruleset/applications.yaml, interval: 86400 }
 rules:
-rules:
     - 'RULE-SET,applications,🎯 全球直连'
     - 'RULE-SET,private,🛑 广告拦截'
     - 'RULE-SET,reject,🛑 广告拦截'
