@@ -50,13 +50,71 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
+    - 💡 自动选择
+    - DIRECT
     - A
     - B
-    - DIRECT
     use: 
     - WARP
     - W
     - S
+  -name: 💡 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    proxies:
+    - A
+    - B
+    use: 
+    - WARP
+    - W
+    - S
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+    - DIRECT
+    - REJECT
+    - 💡 自动选择
+    - A
+    - B
+    use: 
+    - WARP
+    - W
+    - S
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 📲 电报消息
+    type: select
+    proxies:
+    - 💡 自动选择
+    - 🚀 节点选择
+    - DIRECT
+    - A
+    - B
+    use: 
+    - WARP
+    - W
+    - S
+  - name: 🇨🇳 国内网站
+    type: select
+    proxies:
+    proxies:
+    - DIRECT
+    - 💡 自动选择
+    - 🚀 节点选择
+    - A
+    - B
+    use: 
+    - WARP
+    - W
+    - S
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+    - DIRECT
+    - REJECT
 
 rule-providers:
     reject: { type: http, behavior: domain, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt', path: ./ruleset/reject.yaml, interval: 86400 }
@@ -70,16 +128,17 @@ rule-providers:
     lancidr: { type: http, behavior: ipcidr, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt', path: ./ruleset/lancidr.yaml, interval: 86400 }
     applications: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt', path: ./ruleset/applications.yaml, interval: 86400 }
 rules:
-    - 'RULE-SET,applications,DIRECT'
-    - 'RULE-SET,private,DIRECT'
-    - 'RULE-SET,reject,REJECT'
-    - 'RULE-SET,icloud,DIRECT'
-    - 'RULE-SET,apple,DIRECT'
+rules:
+    - 'RULE-SET,applications,🎯 全球直连'
+    - 'RULE-SET,private,🛑 广告拦截'
+    - 'RULE-SET,reject,🛑 广告拦截'
+    - 'RULE-SET,icloud,🍎 苹果服务'
+    - 'RULE-SET,apple,🍎 苹果服务'
     - 'RULE-SET,proxy,🚀 节点选择'
-    - 'RULE-SET,direct,DIRECT'
-    - 'RULE-SET,lancidr,DIRECT'
-    - 'RULE-SET,cncidr,DIRECT'
-    - 'RULE-SET,telegramcidr,🚀 节点选择'
+    - 'RULE-SET,direct,🎯 全球直连'
+    - 'RULE-SET,lancidr,🛑 广告拦截'
+    - 'RULE-SET,cncidr,🇨🇳 国内网站'
+    - 'RULE-SET,telegramcidr,📲 电报消息'
     - 'GEOIP,LAN,DIRECT'
-    - 'GEOIP,CN,DIRECT'
+    - 'GEOIP,CN,🇨🇳 国内网站'
     - 'MATCH,🚀 节点选择'
