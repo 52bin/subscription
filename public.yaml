@@ -70,8 +70,8 @@ proxy-groups:
   - name: 📲 电报消息
     type: select
     proxies:
-    - 💡 自动选择
     - 🚀 节点选择
+    - 💡 自动选择
     - DIRECT
     - A
     - B
