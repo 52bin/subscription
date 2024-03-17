@@ -113,6 +113,18 @@ proxy-groups:
     proxies:
     - DIRECT
     - REJECT
+  - name: 🌐 pikpak下载
+    type: select
+    proxies:
+    - DIRECT
+    - 💡 自动选择
+    - 🚀 节点选择
+    - A
+    - B
+    use: 
+    - WARP
+    - W
+    - S
 rule-providers:
     reject: { type: http, behavior: domain, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt', path: ./ruleset/reject.yaml, interval: 86400 }
     icloud: { type: http, behavior: domain, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt', path: ./ruleset/icloud.yaml, interval: 86400 }
@@ -126,6 +138,7 @@ rule-providers:
     applications: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt', path: ./ruleset/applications.yaml, interval: 86400 }
 rules:
     - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
+    - DOMAIN-KEYWORD,dl-a10b,🌐 pikpak下载
     - 'RULE-SET,applications,🎯 全球直连'
     - 'RULE-SET,private,🛑 广告拦截'
     - 'RULE-SET,reject,🛑 广告拦截'
