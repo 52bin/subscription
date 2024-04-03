@@ -10,8 +10,8 @@
 // @grant        GM_setValue
 // @run-at       document-start
 // @license     MIT
-// @downloadURL https://ghproxy.net/https://raw.githubusercontent.com/52bin/subscription/main/browser/search.js
-// @updateURL https://ghproxy.net/https://raw.githubusercontent.com/52bin/subscription/main/browser/search.js
+// @downloadURL https://ghproxy.net/https://github.com/52bin/subscription/raw/main/browser/seaech.js
+// @updateURL https://ghproxy.net/https://github.com/52bin/subscription/raw/main/browser/seaech.js
 // ==/UserScript==
 
 const punkDeafultMark = "Bing-Baidu-Google-Toutiao-Fsou-Quark-Sougou-360";
