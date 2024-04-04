@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         聚合搜索引擎切换导航[手机版][移动端]
 // @namespace    http://tampermonkey.net/
-// @version      2023.12.12
+// @version      2024.4.5
 // @description  在搜索顶部显示一个聚合搜索引擎切换导航，综合搜索引擎。专注手机网页搜索引擎切换，纯粹的搜索。SearchJumper、搜索跳转、聚合搜索、All Search、Punk Search、搜索切换、搜索酱。
 // @author       PunkJet&Bin
 // @include      *
@@ -15,7 +15,7 @@
 // ==/UserScript==
 
 const punkDeafultMark = "Bing-Baidu-Google-Toutiao-Fsou-Quark-Sougou-360";
-const punkAllSearchMark = "Bing-Baidu-Google-Zhihu-Fsou-360-Wuzhui-Quark-Sougou-Toutiao-Yandex-Ecosia-DuckDuckGo-QwantLite-Javdb";
+const punkAllSearchMark = "Bing-Baidu-Google-Zhihu-Fsou-360-Wuzhui-Quark-Sougou-Toutiao-Yandex-Ecosia-DuckDuckGo-QwantLite-Javcv";
 
 const searchUrlMap = [
     {name: "必应", searchUrl: "https://www.bing.com/search?q=", searchkeyName: ["q"], matchUrl:/bing\.com.*?search\?q=?/g, mark:"Bing",},
@@ -33,7 +33,7 @@ const searchUrlMap = [
     {name: "Ecosia", searchUrl: "https://www.ecosia.org/search?q=", searchkeyName: ["q"], matchUrl:/ecosia\.org.*?q=/g, mark:"Ecosia",},
     {name: "QwantLite", searchUrl: "https://lite.qwant.com/?q=", searchkeyName: ["q"], matchUrl:/lite\.qwant\.com.*?q=/g, mark:"QwantLite",},
     {name: "Swisscows", searchUrl: "https://swisscows.com/en/web?query=", searchkeyName: ["query"], matchUrl:/swisscows\.com.*?query=/g, mark:"Swisscows",},
-    {name: "Javdb", searchUrl: "https://javdb.com/search?q=", searchkeyName: ["q"], matchUrl:/javdb\.com\/search.*?q=/g, mark:"Javdb",}
+    {name: "Javcv", searchUrl: "https://javcv.com/search?category=dvd_code&q=", searchkeyName: ["q"], matchUrl:/javcv\.com\/search?category=dvd_code.*?q=/g, mark:"Javcv",}
 ];
 
 
