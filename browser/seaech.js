@@ -33,7 +33,7 @@ const searchUrlMap = [
     {name: "Ecosia", searchUrl: "https://www.ecosia.org/search?q=", searchkeyName: ["q"], matchUrl:/ecosia\.org.*?q=/g, mark:"Ecosia",},
     {name: "QwantLite", searchUrl: "https://lite.qwant.com/?q=", searchkeyName: ["q"], matchUrl:/lite\.qwant\.com.*?q=/g, mark:"QwantLite",},
     {name: "Swisscows", searchUrl: "https://swisscows.com/en/web?query=", searchkeyName: ["query"], matchUrl:/swisscows\.com.*?query=/g, mark:"Swisscows",},
-    {name: "Javcv", searchUrl: "https://javcv.com/search?category=dvd_code&q=", searchkeyName: ["q"], matchUrl:/javcv\.com\/search?category=dvd_code.*?q=/g, mark:"Javcv",}
+    {name: "Javcv", searchUrl: "https://javcv.com/search?category=dvd_code&q=", searchkeyName: ["q"], matchUrl:/javcv\.com.*?q=/g, mark:"Javcv",}
 ];
 
 
