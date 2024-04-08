@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         聚合搜索引擎切换导航[手机版][移动端]
 // @namespace    http://tampermonkey.net/
-// @version      2024.4.5
+// @version      2024.4.8
 // @description  在搜索顶部显示一个聚合搜索引擎切换导航，综合搜索引擎。专注手机网页搜索引擎切换，纯粹的搜索。SearchJumper、搜索跳转、聚合搜索、All Search、Punk Search、搜索切换、搜索酱。
 // @author       PunkJet&Bin
 // @include      *
@@ -14,15 +14,14 @@
 // @updateURL https://ghproxy.net/https://github.com/52bin/subscription/raw/main/browser/seaech.js
 // ==/UserScript==
 
-const punkDeafultMark = "Bing-Baidu-Google-Toutiao-Fsou-Quark-Sougou-360";
-const punkAllSearchMark = "Bing-Baidu-Google-Zhihu-Fsou-360-Wuzhui-Quark-Sougou-Toutiao-Yandex-Ecosia-DuckDuckGo-QwantLite-Javcv";
+const punkDeafultMark = "Bing-Baidu-Google-Toutiao-Quark-Sougou-360";
+const punkAllSearchMark = "Bing-Baidu-Google-Zhihu-360-Wuzhui-Quark-Sougou-Toutiao-Yandex-DuckDuckGo-UnionDHT-Javcv-Javdb";
 
 const searchUrlMap = [
     {name: "必应", searchUrl: "https://www.bing.com/search?q=", searchkeyName: ["q"], matchUrl:/bing\.com.*?search\?q=?/g, mark:"Bing",},
     {name: "百度", searchUrl: "https://baidu.com/s?wd=", searchkeyName: ["wd", "word"], matchUrl:/baidu\.com.*?w(or)?d=?/g, mark:"Baidu",},
     {name: "谷歌", searchUrl: "https://www.google.com/search?q=", searchkeyName: ["q"], matchUrl:/google\.com.*?search.*?q=/g, mark:"Google",},
     {name: "知乎", searchUrl: "https://www.zhihu.com/search?q=", searchkeyName: ["q"], matchUrl:/zhihu\.com\/search.*?q=/g, mark:"Zhihu",},
-    {name: "F搜", searchUrl: "https://fsoufsou.com/search?q=", searchkeyName: ["q"], matchUrl:/fsoufsou\.com\/.*?q=/g, mark:"Fsou",},
     {name: "360", searchUrl: "https://www.so.com/s?q=", searchkeyName: ["q"], matchUrl:/\.so\.com.*?q=/g, mark:"360",},
     {name: "无追", searchUrl: "https://www.wuzhuiso.com/s?q=", searchkeyName: ["q"], matchUrl:/wuzhuiso\.com.*?q=/g, mark:"Wuzhui",},
     {name: "夸克", searchUrl: "https://quark.sm.cn/s?q=", searchkeyName: ["q"], matchUrl:/sm\.cn.*?q=/g, mark:"Quark",},
@@ -30,10 +29,9 @@ const searchUrlMap = [
     {name: "头条", searchUrl: "https://so.toutiao.com/search/?keyword=", searchkeyName: ["keyword"], matchUrl:/toutiao\.com.*?keyword=/g, mark:"Toutiao",},
     {name: "Yandex", searchUrl: "https://yandex.com/search/touch/?text=", searchkeyName: ["text"], matchUrl:/((ya(ndex)?\.ru)|(yandex\.com)).*?text=/g, mark:"Yandex",},
     {name: "DuckDuckGo", searchUrl: "https://duckduckgo.com/?q=", searchkeyName: ["q"], matchUrl:/duckduckgo\.com.*?q=/g, mark:"DuckDuckGo",},
-    {name: "Ecosia", searchUrl: "https://www.ecosia.org/search?q=", searchkeyName: ["q"], matchUrl:/ecosia\.org.*?q=/g, mark:"Ecosia",},
-    {name: "QwantLite", searchUrl: "https://lite.qwant.com/?q=", searchkeyName: ["q"], matchUrl:/lite\.qwant\.com.*?q=/g, mark:"QwantLite",},
-    {name: "Swisscows", searchUrl: "https://swisscows.com/en/web?query=", searchkeyName: ["query"], matchUrl:/swisscows\.com.*?query=/g, mark:"Swisscows",},
-    {name: "Javcv", searchUrl: "https://javcv.com/search?category=dvd_code&q=", searchkeyName: ["q"], matchUrl:/javcv\.com.*?q=/g, mark:"Javcv",}
+    {name: "UnionDHT", searchUrl: "https://uniondht.org/tracker.php?nm=", searchkeyName: ["nm"], matchUrl:/uniondht.org\/tracker\.php\?nm=.*？/g, mark:"UnionDHT",},
+    {name: "Javcv", searchUrl: "https://javcv.com/search?category=dvd_code&q=", searchkeyName: ["query"], matchUrl:/javcv\.com\/search.*?q=|javcv\.com\/movie\/.*?\//g, mark:"Javcv",},
+    {name: "Javdb", searchUrl: "https://javdb.com/search?q=", searchkeyName: ["q"], matchUrl:/javdb\.com\/search.*?q=/g, mark:"Javdb",}
 ];
 
 
@@ -251,7 +249,7 @@ function addJumpSearchBox(){
   let jumpSortDesc = document.createElement("div");
   jumpSortDesc.className = "jump-sort-discription";
   searchJumpBox.appendChild(jumpSortDesc);
-  jumpSortDesc.innerHTML = `<a style="color:#666666 !important">说明：除搜索引擎，其他站只跳转无导航<br>支持的格式：${punkAllSearchMark}</a>`;
+  jumpSortDesc.innerHTML = `<a style="color:#666666 !important">${punkAllSearchMark}</a>`;
   let punkJumpButton = document.createElement("button");
 
   punkJumpButton.innerText = "点击输入排序";
