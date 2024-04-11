@@ -31,7 +31,7 @@ const searchUrlMap = [
     {name: "DuckDuckGo", searchUrl: "https://duckduckgo.com/?q=", searchkeyName: ["q"], matchUrl:/duckduckgo\.com.*?q=/g, mark:"DuckDuckGo",},
     {name: "Ecosia", searchUrl: "https://www.ecosia.org/search?q=", searchkeyName: ["q"], matchUrl:/ecosia\.org.*?q=/g, mark:"Ecosia",},
     {name: "QwantLite", searchUrl: "https://lite.qwant.com/?q=", searchkeyName: ["q"], matchUrl:/lite\.qwant\.com.*?q=/g, mark:"QwantLite",},
-    {name: "Swisscows", searchUrl: "https://swisscows.com/en/web?query=", searchkeyName: ["query"], matchUrl:/swisscows\.com.*?query=/g, mark:"Swisscows",}
+    {name: "Swisscows", searchUrl: "https://swisscows.com/en/web?query=", searchkeyName: ["query"], matchUrl:/swisscows\.com.*?query=/g, mark:"Swisscows",},
     {name: "UnionDHT", searchUrl: "https://uniondht.org/tracker.php?nm=", searchkeyName: ["nm"], matchUrl:/uniondht.org\/tracker\.php\?nm=.*？/g, mark:"UnionDHT",},
     {name: "Javcv", searchUrl: "https://javcv.com/search?category=dvd_code&q=", searchkeyName: ["query"], matchUrl:/javcv\.com\/search.*?q=|javcv\.com\/movie\/.*?\//g, mark:"Javcv",},
     {name: "Javdb", searchUrl: "https://javdb.com/search?q=", searchkeyName: ["q"], matchUrl:/javdb\.com\/search.*?q=/g, mark:"Javdb",}
