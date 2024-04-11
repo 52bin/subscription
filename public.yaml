@@ -139,6 +139,7 @@ rule-providers:
 rules:
     - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
     - DOMAIN-KEYWORD,dl-a10b,🌐 pikpak下载
+    - DOMAIN-SUFFIX,jdbstatic.com,🎯 全球直连
     - 'RULE-SET,applications,🎯 全球直连'
     - 'RULE-SET,private,🛑 广告拦截'
     - 'RULE-SET,reject,🛑 广告拦截'
