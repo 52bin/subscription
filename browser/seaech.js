@@ -33,7 +33,7 @@ const searchUrlMap = [
     {name: "QwantLite", searchUrl: "https://lite.qwant.com/?q=", searchkeyName: ["q"], matchUrl:/lite\.qwant\.com.*?q=/g, mark:"QwantLite",},
     {name: "Swisscows", searchUrl: "https://swisscows.com/en/web?query=", searchkeyName: ["query"], matchUrl:/swisscows\.com.*?query=/g, mark:"Swisscows",},
     {name: "UnionDHT", searchUrl: "https://uniondht.org/tracker.php?nm=", searchkeyName: ["nm"], matchUrl:/uniondht.org\/tracker\.php\?nm=.*？/g, mark:"UnionDHT",},
-    {name: "Javcv", searchUrl: "https://javcv.com/search?category=dvd_code&q=", searchkeyName: ["query"], matchUrl:/javcv\.com\/search.*?q=|javcv\.com\/movie\/.*?\//g, mark:"Javcv",},
+    {name: "Javcv", searchUrl: "https://javcv.com/search?category=dvd_code&q=", searchkeyName: ["q"], matchUrl:/javcv\.com\/search.*?q=/g, mark:"Javcv",},
     {name: "Javdb", searchUrl: "https://javdb.com/search?q=", searchkeyName: ["q"], matchUrl:/javdb\.com\/search.*?q=/g, mark:"Javdb",}
 ];
 
