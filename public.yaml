@@ -14,9 +14,6 @@ dns:
     nameserver: ['https://dns.alidns.com/dns-query']
     fallback: ['https://dns.alidns.com/dns-query', 'https://dns.cloudflare.com/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
-proxies:
-    - {name: A, server: ip.sb, port: 8443, client-fingerprint: random, type: vless, uuid: 73b6dbd5-a27a-4c76-9ad1-42a82380dddb, tls: true, tfo: false, skip-cert-verify: true, servername: worker.ariesver.online, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: worker.ariesver.online}}, udp: true}
-    - {name: B, server: ip.sb, port: 8443, client-fingerprint: random, type: vless, uuid: 73b6dbd5-a27a-4c76-9ad1-42a82380dddb, tls: true, tfo: false, skip-cert-verify: true, servername: ed-1ii.pages.dev, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: ed-1ii.pages.dev}}, udp: true}
 proxy-providers: 
   WARP:
     type: http
@@ -51,8 +48,6 @@ proxy-groups:
     proxies:
     - 💡 自动选择
     - DIRECT
-    - A
-    - B
     use: 
     - WARP
     - W
@@ -61,8 +56,6 @@ proxy-groups:
     type: url-test
     url: http://www.google.com/generate_204
     proxies:
-    - A
-    - B
     use: 
     - WARP
     - W
@@ -73,8 +66,6 @@ proxy-groups:
     - 🚀 节点选择
     - 💡 自动选择
     - DIRECT
-    - A
-    - B
     use: 
     - WARP
     - W
@@ -85,8 +76,6 @@ proxy-groups:
     - DIRECT
     - REJECT
     - 💡 自动选择
-    - A
-    - B
     use: 
     - WARP
     - W
@@ -97,8 +86,6 @@ proxy-groups:
     - DIRECT
     - 💡 自动选择
     - 🚀 节点选择
-    - A
-    - B
     use: 
     - WARP
     - W
@@ -119,8 +106,6 @@ proxy-groups:
     - DIRECT
     - 💡 自动选择
     - 🚀 节点选择
-    - A
-    - B
     use: 
     - WARP
     - W
