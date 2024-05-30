@@ -50,7 +50,7 @@ proxy-groups:
   - {name: 🎯 全球直连, type: select, proxies: [DIRECT,REJECT]}
   #- {name: 🍃 广告拦截, type: select, proxies: [REJECT,DIRECT]}
   - {name: 🐟 漏网之鱼, <<: *o1}
-  - {name: 🌐 pikpak, <<: *o2}
+  - {name: 🌐 pikpak, <<: *o1}
 #地区策略组
   - {name: 🇭🇰 香港节点, type: select, include-all-providers: true, filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 🇨🇳 台湾节点, type: select, include-all-providers: true, filter: "(?i)台|tw|taiwan|tai wan"}
