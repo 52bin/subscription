@@ -63,6 +63,7 @@ rules:
   - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
   - DOMAIN-KEYWORD,dl-a10b,🌐 pikpak
   - DOMAIN-SUFFIX,mypikpak.com,🌐 pikpak
+  - DOMAIN-SUFFIX,info.mypikpak.com,🚀 节点选择
   - DOMAIN-SUFFIX,jdbstatic.com,🎯 全球直连
   - DOMAIN-SUFFIX,theovan.cn,🚀 节点选择
   - DOMAIN,metshop.vip,🎯 全球直连
