@@ -13,7 +13,7 @@ o2: &o2 {type: select, proxies: [🎯 全球直连, 🚀 节点选择, ♻️ �
 # url 里填写自己的订阅 sub1 or sub2 修改成机场名称
 proxy-providers:
 
-user:
+  user:
     <<: *pp
     url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/52bin/subscription/main/user"
 
