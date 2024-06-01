@@ -30,9 +30,10 @@ proxy-providers:
 
 ########################################################################分隔符
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 💠 其他地区], include-all-providers: true}
+  - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动选择,  🎯 全球直连,🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 💠 其他地区], include-all-providers: true}
   - {name: ♻️ 自动选择, type: url-test, interval: 600, tolerance: 100, lazy: true, url: https://www.gstatic.com/generate_204, include-all-providers: true}
   - {name: 📲 电报信息, <<: *o1}
+  - {name: 🌐 pikpak, <<: *o1}
   - {name: 📱 Twitter, <<: *o1}
   - {name: 💬 OpenAi, <<: *o1}
   - {name: 🎬 油管视频, <<: *o1}
@@ -50,7 +51,6 @@ proxy-groups:
   - {name: 🎯 全球直连, type: select, proxies: [DIRECT,REJECT]}
   #- {name: 🍃 广告拦截, type: select, proxies: [REJECT,DIRECT]}
   - {name: 🐟 漏网之鱼, <<: *o1}
-  - {name: 🌐 pikpak, <<: *o1}
 #地区策略组
   - {name: 🇭🇰 香港节点, type: select, include-all-providers: true, filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 🇨🇳 台湾节点, type: select, include-all-providers: true, filter: "(?i)台|tw|taiwan|tai wan"}
