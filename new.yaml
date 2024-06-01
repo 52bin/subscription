@@ -12,6 +12,11 @@ o2: &o2 {type: select, proxies: [🎯 全球直连, 🚀 节点选择, ♻️ �
 ########################################################################分隔符
 # url 里填写自己的订阅 sub1 or sub2 修改成机场名称
 proxy-providers:
+
+user:
+    <<: *pp
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/52bin/subscription/main/user"
+
   neko: 
     <<: *pp
     url: "https://neko-warp.nloli.xyz/neko_warp.yaml"
@@ -27,7 +32,7 @@ proxy-providers:
   king:
     <<: *pp
     url: "http://allsub.king361.cf"
-
+    
 ########################################################################分隔符
 proxy-groups:
   - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动选择,  🎯 全球直连,🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 💠 其他地区], include-all-providers: true}
