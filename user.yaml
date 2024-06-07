@@ -5,7 +5,7 @@ proxies:
   port: 51820
   private-key: ePoEXNvko4Re1KYF2tKZP2uDkG7M3nUcXWj+4IYsMn0=
   public-key: EgR224sw0SmrbDj5yMutRGM8j38X5RVGMVyIXnXjE2I=
-  pre-shared-key:tR96CwTEOYNJbwMi3IyRe+ecdVBTy+7/
+  pre-shared-key: tR96CwTEOYNJbwMi3IyRe+ecdVBTy+7/FiJpXnory9Y=
   remote-dns-resolve: true
   server: 95.164.10.8
   type: wireguard
