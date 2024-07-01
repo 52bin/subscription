@@ -16,6 +16,9 @@ proxy-providers:
   user:
     <<: *pp
     url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/52bin/subscription/main/user.yaml"
+  berd:
+    <<: *pp
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/52bin/subscription/main/berd"
 
   neko: 
     <<: *pp
